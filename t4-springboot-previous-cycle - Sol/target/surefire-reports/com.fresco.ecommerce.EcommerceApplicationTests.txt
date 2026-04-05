@@ -1,0 +1,250 @@
+-------------------------------------------------------------------------------
+Test set: com.fresco.ecommerce.EcommerceApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 22, Failures: 7, Errors: 15, Skipped: 0, Time elapsed: 8.519 s <<< FAILURE! -- in com.fresco.ecommerce.EcommerceApplicationTests
+com.fresco.ecommerce.EcommerceApplicationTests.productSearchStatus -- Time elapsed: 0.518 s <<< FAILURE!
+java.lang.AssertionError: Response status expected:<200> but was:<401>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$is$1(StatusResultMatchers.java:64)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.fresco.ecommerce.EcommerceApplicationTests.productSearchStatus(EcommerceApplicationTests.java:61)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.fresco.ecommerce.EcommerceApplicationTests.productSearchWithoutKeyword -- Time elapsed: 0.006 s <<< FAILURE!
+java.lang.AssertionError: Response status expected:<400> but was:<401>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$is$1(StatusResultMatchers.java:64)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.fresco.ecommerce.EcommerceApplicationTests.productSearchWithoutKeyword(EcommerceApplicationTests.java:68)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.fresco.ecommerce.EcommerceApplicationTests.productSearchWithProductName -- Time elapsed: 0.006 s <<< FAILURE!
+java.lang.AssertionError: Response status expected:<200> but was:<401>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$is$1(StatusResultMatchers.java:64)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.fresco.ecommerce.EcommerceApplicationTests.productSearchWithProductName(EcommerceApplicationTests.java:75)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.fresco.ecommerce.EcommerceApplicationTests.productSearchWithCategoryName -- Time elapsed: 0.007 s <<< FAILURE!
+java.lang.AssertionError: Response status expected:<200> but was:<401>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$is$1(StatusResultMatchers.java:64)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.fresco.ecommerce.EcommerceApplicationTests.productSearchWithCategoryName(EcommerceApplicationTests.java:95)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.fresco.ecommerce.EcommerceApplicationTests.consumerLoginWithBadCreds -- Time elapsed: 0.012 s <<< FAILURE!
+java.lang.AssertionError: Response status expected:<401> but was:<403>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$is$1(StatusResultMatchers.java:64)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.fresco.ecommerce.EcommerceApplicationTests.consumerLoginWithBadCreds(EcommerceApplicationTests.java:118)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.fresco.ecommerce.EcommerceApplicationTests.consumerLoginWithValidCreds -- Time elapsed: 0.013 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <200> but was: <403>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+	at com.fresco.ecommerce.EcommerceApplicationTests.consumerLoginWithValidCreds(EcommerceApplicationTests.java:137)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.fresco.ecommerce.EcommerceApplicationTests.consumerGetCartWithValidJWT -- Time elapsed: 0.008 s <<< ERROR!
+org.json.JSONException: End of input at character 0 of 
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:450)
+	at org.json.JSONTokener.nextValue(JSONTokener.java:97)
+	at org.json.JSONObject.<init>(JSONObject.java:155)
+	at org.json.JSONObject.<init>(JSONObject.java:172)
+	at com.fresco.ecommerce.EcommerceApplicationTests.consumerGetCartWithValidJWT(EcommerceApplicationTests.java:147)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.fresco.ecommerce.EcommerceApplicationTests.sellerApiWithConsumerJWT -- Time elapsed: 0.005 s <<< ERROR!
+org.json.JSONException: End of input at character 0 of 
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:450)
+	at org.json.JSONTokener.nextValue(JSONTokener.java:97)
+	at org.json.JSONObject.<init>(JSONObject.java:155)
+	at org.json.JSONObject.<init>(JSONObject.java:172)
+	at com.fresco.ecommerce.EcommerceApplicationTests.sellerApiWithConsumerJWT(EcommerceApplicationTests.java:166)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.fresco.ecommerce.EcommerceApplicationTests.sellerLoginWithValidCreds -- Time elapsed: 0.006 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <200> but was: <403>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+	at com.fresco.ecommerce.EcommerceApplicationTests.sellerLoginWithValidCreds(EcommerceApplicationTests.java:178)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.fresco.ecommerce.EcommerceApplicationTests.sellerGetProductsWithValidJWT -- Time elapsed: 0.006 s <<< ERROR!
+org.json.JSONException: End of input at character 0 of 
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:450)
+	at org.json.JSONTokener.nextValue(JSONTokener.java:97)
+	at org.json.JSONObject.<init>(JSONObject.java:155)
+	at org.json.JSONObject.<init>(JSONObject.java:172)
+	at com.fresco.ecommerce.EcommerceApplicationTests.sellerGetProductsWithValidJWT(EcommerceApplicationTests.java:187)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.fresco.ecommerce.EcommerceApplicationTests.consumerApiWithSellerJWT -- Time elapsed: 0.007 s <<< ERROR!
+org.json.JSONException: End of input at character 0 of 
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:450)
+	at org.json.JSONTokener.nextValue(JSONTokener.java:97)
+	at org.json.JSONObject.<init>(JSONObject.java:155)
+	at org.json.JSONObject.<init>(JSONObject.java:172)
+	at com.fresco.ecommerce.EcommerceApplicationTests.consumerApiWithSellerJWT(EcommerceApplicationTests.java:205)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.fresco.ecommerce.EcommerceApplicationTests.sellerAddNewProduct -- Time elapsed: 0.008 s <<< ERROR!
+org.json.JSONException: End of input at character 0 of 
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:450)
+	at org.json.JSONTokener.nextValue(JSONTokener.java:97)
+	at org.json.JSONObject.<init>(JSONObject.java:155)
+	at org.json.JSONObject.<init>(JSONObject.java:172)
+	at com.fresco.ecommerce.EcommerceApplicationTests.sellerAddNewProduct(EcommerceApplicationTests.java:235)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.fresco.ecommerce.EcommerceApplicationTests.sellerCheckAddedNewProduct -- Time elapsed: 0.008 s <<< ERROR!
+org.json.JSONException: End of input at character 0 of 
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:450)
+	at org.json.JSONTokener.nextValue(JSONTokener.java:97)
+	at org.json.JSONObject.<init>(JSONObject.java:155)
+	at org.json.JSONObject.<init>(JSONObject.java:172)
+	at com.fresco.ecommerce.EcommerceApplicationTests.sellerCheckAddedNewProduct(EcommerceApplicationTests.java:252)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.fresco.ecommerce.EcommerceApplicationTests.sellerCheckProductFromAnotherSeller -- Time elapsed: 0.008 s <<< ERROR!
+org.json.JSONException: End of input at character 0 of 
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:450)
+	at org.json.JSONTokener.nextValue(JSONTokener.java:97)
+	at org.json.JSONObject.<init>(JSONObject.java:155)
+	at org.json.JSONObject.<init>(JSONObject.java:172)
+	at com.fresco.ecommerce.EcommerceApplicationTests.sellerCheckProductFromAnotherSeller(EcommerceApplicationTests.java:272)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.fresco.ecommerce.EcommerceApplicationTests.sellerUpdateProduct -- Time elapsed: 0.006 s <<< ERROR!
+org.json.JSONException: End of input at character 0 of 
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:450)
+	at org.json.JSONTokener.nextValue(JSONTokener.java:97)
+	at org.json.JSONObject.<init>(JSONObject.java:155)
+	at org.json.JSONObject.<init>(JSONObject.java:172)
+	at com.fresco.ecommerce.EcommerceApplicationTests.sellerUpdateProduct(EcommerceApplicationTests.java:289)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.fresco.ecommerce.EcommerceApplicationTests.sellerUpdateProductWithWrongProductId -- Time elapsed: 0.007 s <<< ERROR!
+org.json.JSONException: End of input at character 0 of 
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:450)
+	at org.json.JSONTokener.nextValue(JSONTokener.java:97)
+	at org.json.JSONObject.<init>(JSONObject.java:155)
+	at org.json.JSONObject.<init>(JSONObject.java:172)
+	at com.fresco.ecommerce.EcommerceApplicationTests.sellerUpdateProductWithWrongProductId(EcommerceApplicationTests.java:316)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.fresco.ecommerce.EcommerceApplicationTests.consumerAddProductToCart -- Time elapsed: 0.008 s <<< ERROR!
+org.json.JSONException: End of input at character 0 of 
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:450)
+	at org.json.JSONTokener.nextValue(JSONTokener.java:97)
+	at org.json.JSONObject.<init>(JSONObject.java:155)
+	at org.json.JSONObject.<init>(JSONObject.java:172)
+	at com.fresco.ecommerce.EcommerceApplicationTests.consumerAddProductToCart(EcommerceApplicationTests.java:332)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.fresco.ecommerce.EcommerceApplicationTests.consumerAddProductToCartAgain -- Time elapsed: 0.006 s <<< ERROR!
+org.json.JSONException: End of input at character 0 of 
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:450)
+	at org.json.JSONTokener.nextValue(JSONTokener.java:97)
+	at org.json.JSONObject.<init>(JSONObject.java:155)
+	at org.json.JSONObject.<init>(JSONObject.java:172)
+	at com.fresco.ecommerce.EcommerceApplicationTests.consumerAddProductToCartAgain(EcommerceApplicationTests.java:355)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.fresco.ecommerce.EcommerceApplicationTests.consumerUpdateProductInCart -- Time elapsed: 0.007 s <<< ERROR!
+org.json.JSONException: End of input at character 0 of 
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:450)
+	at org.json.JSONTokener.nextValue(JSONTokener.java:97)
+	at org.json.JSONObject.<init>(JSONObject.java:155)
+	at org.json.JSONObject.<init>(JSONObject.java:172)
+	at com.fresco.ecommerce.EcommerceApplicationTests.consumerUpdateProductInCart(EcommerceApplicationTests.java:380)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.fresco.ecommerce.EcommerceApplicationTests.consumerUpdateProductInCartWithZeroQuantity -- Time elapsed: 0.005 s <<< ERROR!
+org.json.JSONException: End of input at character 0 of 
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:450)
+	at org.json.JSONTokener.nextValue(JSONTokener.java:97)
+	at org.json.JSONObject.<init>(JSONObject.java:155)
+	at org.json.JSONObject.<init>(JSONObject.java:172)
+	at com.fresco.ecommerce.EcommerceApplicationTests.consumerUpdateProductInCartWithZeroQuantity(EcommerceApplicationTests.java:405)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.fresco.ecommerce.EcommerceApplicationTests.consumerDeleteProductInCart -- Time elapsed: 0.007 s <<< ERROR!
+org.json.JSONException: End of input at character 0 of 
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:450)
+	at org.json.JSONTokener.nextValue(JSONTokener.java:97)
+	at org.json.JSONObject.<init>(JSONObject.java:155)
+	at org.json.JSONObject.<init>(JSONObject.java:172)
+	at com.fresco.ecommerce.EcommerceApplicationTests.consumerDeleteProductInCart(EcommerceApplicationTests.java:431)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.fresco.ecommerce.EcommerceApplicationTests.sellerDeleteProduct -- Time elapsed: 0.006 s <<< ERROR!
+org.json.JSONException: End of input at character 0 of 
+	at org.json.JSONTokener.syntaxError(JSONTokener.java:450)
+	at org.json.JSONTokener.nextValue(JSONTokener.java:97)
+	at org.json.JSONObject.<init>(JSONObject.java:155)
+	at org.json.JSONObject.<init>(JSONObject.java:172)
+	at com.fresco.ecommerce.EcommerceApplicationTests.sellerDeleteProduct(EcommerceApplicationTests.java:450)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
